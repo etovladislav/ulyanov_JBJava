@@ -24,8 +24,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addUser(String firstName, String lastName, String middleName, String birthday, String sex) {
-        if (birthday.equals("")) birthday = "Не указано";
-        if (sex == null) sex = "Не указано";
+        if (birthday.isEmpty()) {
+            birthday = "Не указано";
+        }
+        if (sex == null) {
+            sex = "Не указано";
+        }
         rep.addUser(firstName, lastName, middleName, birthday, sex);
     }
 }
