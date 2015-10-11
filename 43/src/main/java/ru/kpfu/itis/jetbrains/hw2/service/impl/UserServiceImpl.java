@@ -23,13 +23,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void addUser(String firstName, String lastName, String middleName, String birthday, String sex) {
-        if (birthday.isEmpty()) {
-            birthday = "Не указано";
+    public void addUser(User user) {
+        if (user.getBirthday().isEmpty()) {
+            user.setBirthday("Не указано");
         }
-        if (sex == null) {
-            sex = "Не указано";
+        if (user.getSex() == null) {
+            user.setSex("Не указано");
         }
-        rep.addUser(firstName, lastName, middleName, birthday, sex);
+        rep.addUser(user);
     }
 }
