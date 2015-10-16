@@ -20,11 +20,11 @@ public class StudentRepositoryImpl implements StudentRepository {
     @Override
     public Integer findStudentByNameSurnameLasName(String firstname, String surname, String lastName) {
 
-        System.out.println(firstname+lastName+surname);
+        System.out.println(firstname + lastName + surname);
         Query query = em.createNativeQuery("SELECT id FROM students WHERE firstname = ? AND surname = ? AND lastname = ?");
-        query.setParameter(1,firstname);
-        query.setParameter(2,surname);
-        query.setParameter(3,lastName);
-        return (Integer)query.getSingleResult();
+        query.setParameter(1, firstname);
+        query.setParameter(2, surname);
+        query.setParameter(3, lastName);
+        return (Integer) query.getSingleResult();
     }
 }

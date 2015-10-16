@@ -10,6 +10,8 @@ import java.math.BigInteger;
  */
 public interface ScoreService {
     public BigDecimal getAverage(Student student);
+
     public BigInteger getScore(Student student);
+
     public Integer getScoreSubject(Student student, Integer subject);
 }

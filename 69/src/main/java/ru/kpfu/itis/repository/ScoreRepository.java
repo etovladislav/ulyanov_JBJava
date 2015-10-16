@@ -12,6 +12,8 @@ import java.util.List;
  */
 public interface ScoreRepository {
     public BigDecimal getAverage(Integer id);
+
     public BigInteger getScore(Integer id);
+
     public Integer getScoreSubject(Integer id, Integer subject);
 }

@@ -23,7 +23,7 @@ public class ScoreServiceImpl implements ScoreService {
     @Autowired
     StudentRepository studentRepository;
 
-    public Integer findStudent(Student student){
+    public Integer findStudent(Student student) {
         return studentRepository.findStudentByNameSurnameLasName(student.getFirstName(), student.getSurName(), student.getLastName());
     }
 
@@ -39,6 +39,6 @@ public class ScoreServiceImpl implements ScoreService {
 
     @Override
     public Integer getScoreSubject(Student student, Integer subject) {
-        return userRepository.getScoreSubject(findStudent(student),subject);
+        return userRepository.getScoreSubject(findStudent(student), subject);
     }
 }

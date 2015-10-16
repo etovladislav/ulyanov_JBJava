@@ -38,7 +38,7 @@ public class ScoreRepositoryImpl implements ScoreRepository {
             query.setParameter(1, id);
             query.setParameter(2, subject);
             return (Integer) query.getSingleResult();
-        }catch (NoResultException nre){
+        } catch (NoResultException nre) {
             return null;
         }
     }
