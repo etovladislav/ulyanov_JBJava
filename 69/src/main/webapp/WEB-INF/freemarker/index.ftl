@@ -1,7 +1,7 @@
 <#import "/spring.ftl" as spring/>
 <html>
 <body>
-<form action="/average1" method="post">
+<form action="/average" method="post">
     <input type="text" name="firstName" placeholder="name student" required/>
     <input type="text" name="surName" placeholder="lastname student" required/>
     <input type="text" name="lastName" placeholder="surname student" required/>
