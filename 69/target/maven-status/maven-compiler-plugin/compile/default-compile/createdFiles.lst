@@ -1,0 +1,10 @@
+ru\kpfu\itis\repository\iml\ScoreRepositoryImpl.class
+ru\kpfu\itis\model\Student.class
+ru\kpfu\itis\repository\StudentRepository.class
+ru\kpfu\itis\model\Subject.class
+ru\kpfu\itis\model\Scores.class
+ru\kpfu\itis\service\ScoreService.class
+ru\kpfu\itis\service\impl\ScoreServiceImpl.class
+ru\kpfu\itis\repository\ScoreRepository.class
+ru\kpfu\itis\controller\MainController.class
+ru\kpfu\itis\repository\iml\StudentRepositoryImpl.class
