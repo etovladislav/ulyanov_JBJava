@@ -21,7 +21,7 @@ public class MainController {
         return "index";
     }
 
-    @RequestMapping(value = "/average1", method = RequestMethod.POST)
+    @RequestMapping(value = "/average", method = RequestMethod.POST)
     public String getAverage(@ModelAttribute Student student, Model map) {
         map.addAttribute("average", userService.getAverage(student));
         return "average";
