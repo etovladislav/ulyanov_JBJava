@@ -23,15 +23,7 @@ public class User {
 
     @Column(name = "lastname", nullable = false)
     private String lastname;
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
-
+    
     @Column(name = "avatar")
     private String avatar;
 
@@ -128,7 +120,15 @@ public class User {
     public void setOpenAccount(Boolean openAccount) {
         this.openAccount = openAccount;
     }
+    
+    public String getAvatar() {
+        return avatar;
+    }
 
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+    
     public List<Post> getPosts() {
         return posts;
     }
