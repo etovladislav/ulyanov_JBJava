@@ -5,11 +5,10 @@ import org.springframework.stereotype.Service;
 import ru.kpfu.itis.form.UserRegistrationForm;
 import ru.kpfu.itis.form.UserSettingsForm;
 import ru.kpfu.itis.model.User;
-import ru.kpfu.itis.model.enums.Sex;
 import ru.kpfu.itis.repository.UserRepository;
 import ru.kpfu.itis.service.UserService;
-import ru.kpfu.itis.util.UserAvatar;
 import ru.kpfu.itis.util.UserRegistrationFormToUser;
+import ru.kpfu.itis.util.UserSettingsFormToUser;
 
 import javax.transaction.Transactional;
 
@@ -28,16 +27,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public void updateUserInfo(UserSettingsForm settingsForm, User user) {
-        user.setCity(settingsForm.getCity());
-        user.setFirstname(settingsForm.getFirstname());
-        user.setLastname(settingsForm.getLastname());
-        if (settingsForm.getSex() != null) {
-            user.setSex(settingsForm.getSex() == 0 ? Sex.MALE : Sex.FEMALE);//А вдруг пол сменил(a)?
-        }
-        if (settingsForm.getAvatar() != null) {
-            user.setAvatar(UserAvatar.getDefaultAvatar(settingsForm.getAvatar()));
-        }
+    public void updateUserInfo(UserSettingsForm settingsForm, User aUser) {
+        User user = UserSettingsFormToUser.transformToUser(settingsForm, aUser);
         userRepository.save(user);
     }
 

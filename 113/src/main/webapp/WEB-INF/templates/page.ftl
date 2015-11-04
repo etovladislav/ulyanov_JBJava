@@ -18,6 +18,9 @@
                     <div class="profile-usertitle-job">
                     ${user.city}
                     </div>
+                    <div id="username">
+                    ${user.username}
+                    </div>
                 </div>
                 <div class="profile-usermenu">
                     <ul class="nav">
@@ -52,57 +55,6 @@
 </div>
 </div>
 </div>
-<script>
-    $(document).ready(function () {
-        updateTweets();
-        $("#js-sendpost").on("click", function () {
-            sendTweet()
-        });
-    });
-
-    function sendTweet() {
-        $input = $("#js-post-text");
-        var text = $input.val();
-        if (text.length == 0) {
-            return;
-        }
-        $.ajax({
-            url: "posts/add/${user.username}",
-            type: "POST",
-            data: {
-                text: text
-            },
-            success: function () {
-                updateTweets();
-            }
-        })
-    }
-
-
-    function deletePost(postid) {
-        $button = $("#delete-post");
-        $.ajax({
-            url: "posts/delete",
-            type: "POST",
-            data: {
-                id: postid
-            },
-            success: function () {
-                updateTweets();
-            }
-        })
-    }
-
-    function updateTweets() {
-        $.ajax({
-            url: "posts/getAll/${user.username}",
-            type: "GET",
-            dataType: "html",
-            success: function (data) {
-                $("#posts-user").html(data);
-            }
-        })
-    }
-</script>
+<script src="/js/script.js"></script>
 </#macro>
 <@main title="Main page"/>

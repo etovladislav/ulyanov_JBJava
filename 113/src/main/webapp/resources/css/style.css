@@ -293,3 +293,7 @@ footer {
 .container-page {
     background-color: #ffffff;
 }
+
+#username {
+    display: none;
+}

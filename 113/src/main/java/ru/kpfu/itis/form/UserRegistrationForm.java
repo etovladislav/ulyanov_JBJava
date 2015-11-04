@@ -6,27 +6,27 @@ import javax.validation.constraints.Size;
 
 public class UserRegistrationForm {
 
-    @NotNull(message = "Заполните это поле")
-    @Size(min = 2, max = 30, message = "Не менее 2-и символов и не более 30")
+    @NotNull(message = "Р—Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рѕ РїРѕР»Рµ")
+    @Size(min = 2, max = 30, message = "РќРµ РјРµРЅРµРµ 2-Рё СЃРёРјРІРѕР»РѕРІ Рё РЅРµ Р±РѕР»РµРµ 30")
     private String firstname;
 
-    @NotNull(message = "Заполните это поле")
-    @Size(min = 2, max = 30, message = "Не менее 2-и символов и не более 30")
+    @NotNull(message = "Р—Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рѕ РїРѕР»Рµ")
+    @Size(min = 2, max = 30, message = "РќРµ РјРµРЅРµРµ 2-Рё СЃРёРјРІРѕР»РѕРІ Рё РЅРµ Р±РѕР»РµРµ 30")
     private String lastname;
 
-    @NotNull(message = "Заполните это поле")
-    @Size(min = 5, max = 30, message = "Не менее 5-и символов и не более 30")
+    @NotNull(message = "Р—Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рѕ РїРѕР»Рµ")
+    @Size(min = 5, max = 30, message = "РќРµ РјРµРЅРµРµ 5-Рё СЃРёРјРІРѕР»РѕРІ Рё РЅРµ Р±РѕР»РµРµ 30")
     private String username;
 
     private Integer sex;
 
-    @NotNull(message = "Заполните это поле")
+    @NotNull(message = "Р—Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рѕ РїРѕР»Рµ")
     private String city;
 
     private Boolean openAccount;
 
-    @NotNull(message = "Заполните это поле")
-    @Size(min = 6, max = 30, message = "Не менее 6-и символов и не более 30")
+    @NotNull(message = "Р—Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рѕ РїРѕР»Рµ")
+    @Size(min = 6, max = 30, message = "РќРµ РјРµРЅРµРµ 6-Рё СЃРёРјРІРѕР»РѕРІ Рё РЅРµ Р±РѕР»РµРµ 30")
     private String password;
 
     public UserRegistrationForm() {

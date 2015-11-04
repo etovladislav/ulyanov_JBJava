@@ -8,12 +8,12 @@ import javax.validation.constraints.Size;
  */
 public class UserSettingsForm {
 
-    @NotNull(message = "Заполните это поле")
-    @Size(min = 2, max = 30, message = "Не менее 2-и символов и не более 30")
+    @NotNull(message = "Р—Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рѕ РїРѕР»Рµ")
+    @Size(min = 2, max = 30, message = "РќРµ РјРµРЅРµРµ 2-Рё СЃРёРјРІРѕР»РѕРІ Рё РЅРµ Р±РѕР»РµРµ 30")
     private String firstname;
 
-    @NotNull(message = "Заполните это поле")
-    @Size(min = 2, max = 30, message = "Не менее 2-и символов и не более 30")
+    @NotNull(message = "Р—Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рѕ РїРѕР»Рµ")
+    @Size(min = 2, max = 30, message = "РќРµ РјРµРЅРµРµ 2-Рё СЃРёРјРІРѕР»РѕРІ Рё РЅРµ Р±РѕР»РµРµ 30")
     private String lastname;
 
     private Integer sex;
@@ -28,7 +28,7 @@ public class UserSettingsForm {
         this.avatar = avatar;
     }
 
-    @NotNull(message = "Заполните это поле")
+    @NotNull(message = "Р—Р°РїРѕР»РЅРёС‚Рµ СЌС‚Рѕ РїРѕР»Рµ")
     private String city;
 
     public String getFirstname() {
