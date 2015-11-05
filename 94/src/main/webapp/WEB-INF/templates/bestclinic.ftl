@@ -1,0 +1,3 @@
+<#if bestclinic??>
+${bestclinic}
+</#if>
