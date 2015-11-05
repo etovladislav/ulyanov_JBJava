@@ -12,10 +12,11 @@ import ru.kpfu.itis.service.MedClinicService;
 import javax.persistence.NoResultException;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Service
 public class MedClinicServiceImpl implements MedClinicService {
-
+    private static final Logger log = Logger.getLogger(MedClinicServiceImpl.class.getName());
     @Autowired
     MedClinicRepository medClinicRepository;
 
@@ -67,7 +68,7 @@ public class MedClinicServiceImpl implements MedClinicService {
                     medClinicId, PeopleType.CLIENT, medClinicRepository.getOfficeId(office, medClinic));
             return medClinicRepository.getAverageCheck(person);
         } catch (NoResultException e) {
-            System.err.println(e.getMessage());
+            log.info("No result");
             return null;
         }
     }

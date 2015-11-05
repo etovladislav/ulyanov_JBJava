@@ -8,9 +8,13 @@ import ru.kpfu.itis.service.StuffService;
 
 import javax.persistence.NoResultException;
 import java.util.Date;
+import java.util.logging.Logger;
 
 @Service
 public class StuffServiceImpl implements StuffService {
+
+    private static final Logger log = Logger.getLogger(StuffServiceImpl.class.getName());
+
     @Autowired
     PersonRepository personRepository;
 
@@ -19,7 +23,7 @@ public class StuffServiceImpl implements StuffService {
         try {
             return personRepository.getSalary(personRepository.getId(people));
         } catch (NoResultException e) {
-            System.err.println(e.getMessage());
+            log.info("No result");
             return null;
         }
     }
@@ -29,7 +33,7 @@ public class StuffServiceImpl implements StuffService {
         try {
             return personRepository.getDate(personRepository.getId(people));
         } catch (NoResultException e) {
-            System.err.println(e.getMessage());
+            log.info("No result");
             return null;
         }
     }

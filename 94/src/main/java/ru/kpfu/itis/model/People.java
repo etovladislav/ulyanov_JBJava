@@ -34,10 +34,6 @@ public class People {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Office officeId;
 
-    public People() {
-        Object t;
-    }
-
     public People(String fio, String pasportSeries, String pasportNumber, String pasportIssues, PeopleType type, Office officeId) {
         this.fio = fio;
         this.pasportSeries = pasportSeries;
