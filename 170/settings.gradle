@@ -1,0 +1,4 @@
+rootProject.name = 'E2015-170'
+include 'Service'
+include 'Model'
+
